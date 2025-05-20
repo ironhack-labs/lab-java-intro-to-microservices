@@ -1,5 +1,31 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
+
+# Microservicios - Proyecto Ironhack
+
+Este proyecto está compuesto por 4 microservicios independientes que trabajan en conjunto:
+
+1. [Discovery Service](https://github.com/ODS-Ironhack/discovery-service.git)  
+   Registro de servicios con Eureka.
+
+2. [Student Info Service](https://github.com/ODS-Ironhack/student-info-service.git)  
+   Información básica de los estudiantes.
+
+3. [Grades Data Service](https://github.com/ODS-Ironhack/grades-data-service)  
+   Servicio encargado de la gestión de las notas y cursos.
+   
+4. [Student Catalog Service](https://github.com/ODS-Ironhack/student-catalog-service.git)  
+   Servicio del catálogo de cursos, notas e información de los estudiantes.
+
+
+
+---
+
+Cada uno de estos servicios es un microservicio Spring Boot con su propio repositorio.
+
+
+
+
 # LAB Java | Intro to Microservices
 
 ## Introduction
