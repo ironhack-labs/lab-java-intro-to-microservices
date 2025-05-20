@@ -26,9 +26,12 @@ Once you finish the assignment, submit a URL link to your repository or your pul
 Using Eureka and Rest Templates complete the following microservices application:
 
 - Create a `discovery-service` that will act as Eureka Discovery Server.
+
+[https://github.com/AsterixKo/lab-intro-micro-discovery-service](https://github.com/AsterixKo/lab-intro-micro-discovery-service)
 - Create 3 services that will act as Eureka Clients:
 
   1. `student-info-service` will be responsible for holding the students’ information.
+[https://github.com/AsterixKo/lab-intro-micro-student-info-service](https://github.com/AsterixKo/lab-intro-micro-student-info-service)
      - **Models:**
        - `Student`: that will hold the id, the student's name and the student's age.
      - **Controllers:**
@@ -37,6 +40,7 @@ Using Eureka and Rest Templates complete the following microservices application
        - `StudentRepository`.
 
   2. `grades-data-service` will be responsible for holding the grades of each course.
+     [https://github.com/AsterixKo/lab-intro-micro-grades-data-service](https://github.com/AsterixKo/lab-intro-micro-grades-data-service)
      - **Models:**
        - `Course`: that will hold the course code and the course name.
        - `Grade`: that will hold the id, grade and the studentId.
@@ -52,6 +56,7 @@ Using Eureka and Rest Templates complete the following microservices application
        - `CourseService`.
 
   3. `student-catalog-service` will be responsible for communicating with the other services and return a catalog containing the list of grades grouped by course name and showing all the students' information per grade.
+  [https://github.com/AsterixKo/lab-intro-micro-student-catalog-service](https://github.com/AsterixKo/lab-intro-micro-student-catalog-service)
      - **Models:**
        - `Catalog`: that will hold the course name and a list of the students' grades.
        - `StudentGrade`: that will hold the student's name, age and the respective grade.
