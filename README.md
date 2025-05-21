@@ -36,6 +36,8 @@ Using Eureka and Rest Templates complete the following microservices application
      - **Repositories:**
        - `StudentRepository`.
 
+  
+- 
   2. `grades-data-service` will be responsible for holding the grades of each course.
      - **Models:**
        - `Course`: that will hold the course code and the course name.
@@ -50,7 +52,8 @@ Using Eureka and Rest Templates complete the following microservices application
        - `GradeRepository`.
      - **Services:**
        - `CourseService`.
-
+  
+     
   3. `student-catalog-service` will be responsible for communicating with the other services and return a catalog containing the list of grades grouped by course name and showing all the students' information per grade.
      - **Models:**
        - `Catalog`: that will hold the course name and a list of the students' grades.
@@ -59,4 +62,13 @@ Using Eureka and Rest Templates complete the following microservices application
      - **Controllers:**
        - `CatalogController`: that will contain a single endpoint to get the students' catalog per course based on the course code.
 
+
+##  GitHub Repositories
+- https://github.com/JesusCiber/StudentInfoService
+- https://github.com/JesusCiber/GradeDataService
+- https://github.com/JesusCiber/StudentCatalogService
+
+
+
 **Note:** You can add data for each service using the `CommandLineRunner` for simpler data insertion and testing.
+
