@@ -60,3 +60,8 @@ Using Eureka and Rest Templates complete the following microservices application
        - `CatalogController`: that will contain a single endpoint to get the students' catalog per course based on the course code.
 
 **Note:** You can add data for each service using the `CommandLineRunner` for simpler data insertion and testing.
+
+**Enlaces**
+https://github.com/Rafa-Gamero/Eureka
+https://github.com/Rafa-Gamero/GradeData
+https://github.com/Rafa-Gamero/StudentCatalog
