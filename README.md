@@ -1,6 +1,9 @@
 ![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# LAB Java | Intro to Microservices
+# LAB Java | Intro to Microservices and Edge Services
+Edge Services- Edge Branch (in all the microservices)
+
+GATEWAY URL: https://github.com/Irenevn16/api-gateway.git
 
 ## Introduction
 
@@ -26,9 +29,15 @@ Once you finish the assignment, submit a URL link to your repository or your pul
 Using Eureka and Rest Templates complete the following microservices application:
 
 - Create a `discovery-service` that will act as Eureka Discovery Server.
+
+**LINK TO GITHUB REPOSITORY:** https://github.com/Irenevn16/discovery-service.git
+
 - Create 3 services that will act as Eureka Clients:
 
   1. `student-info-service` will be responsible for holding the students’ information.
+
+**LINK TO GITHUB REPOSITORY:** https://github.com/Irenevn16/student-info-service.git
+
      - **Models:**
        - `Student`: that will hold the id, the student's name and the student's age.
      - **Controllers:**
@@ -37,6 +46,9 @@ Using Eureka and Rest Templates complete the following microservices application
        - `StudentRepository`.
 
   2. `grades-data-service` will be responsible for holding the grades of each course.
+
+**LINK TO GITHUB REPOSITORY:**https://github.com/Irenevn16/grades-data-service.git
+
      - **Models:**
        - `Course`: that will hold the course code and the course name.
        - `Grade`: that will hold the id, grade and the studentId.
@@ -52,6 +64,9 @@ Using Eureka and Rest Templates complete the following microservices application
        - `CourseService`.
 
   3. `student-catalog-service` will be responsible for communicating with the other services and return a catalog containing the list of grades grouped by course name and showing all the students' information per grade.
+
+**LINK TO GITHUB REPOSITORY:**https://github.com/Irenevn16/student-catalog-service.git
+
      - **Models:**
        - `Catalog`: that will hold the course name and a list of the students' grades.
        - `StudentGrade`: that will hold the student's name, age and the respective grade.
