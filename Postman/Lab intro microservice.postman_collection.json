@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "6bf7b1a9-faad-4695-a619-021b0f1dd334",
+		"name": "Lab intro microservice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44394765"
+	},
+	"item": [
+		{
+			"name": "GRADES_DATA_SERVICE",
+			"item": [
+				{
+					"name": "COURSE",
+					"item": [
+						{
+							"name": "ALL COURSES",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{grades-service-course}}/all",
+									"host": [
+										"{{grades-service-course}}"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "NEW COURSE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseCode\": \"CC05\",\n    \"courseName\": \"Educacion Fisica\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{grades-service-course}}",
+									"host": [
+										"{{grades-service-course}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FIND BY COURSE CODE",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseCode\": \"CC05\",\n    \"courseName\": \"Educacion Fisica\"\n}"
+								},
+								"url": {
+									"raw": "{{grades-service-course}}/CC05",
+									"host": [
+										"{{grades-service-course}}"
+									],
+									"path": [
+										"CC05"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GRADES OF COURSE",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{grades-service-course}}/grades/CC05",
+									"host": [
+										"{{grades-service-course}}"
+									],
+									"path": [
+										"grades",
+										"CC05"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "GRADES",
+					"item": [
+						{
+							"name": "NEW GRADE",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseCode\": \"CC05\",\n    \"grade\": 2.2,\n    \"studentId\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{grades-sevice}}",
+									"host": [
+										"{{grades-sevice}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ALL GRADES",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"courseCode\": \"CC01\",\n    \"grade\": 3.5,\n    \"studentId\": 1\n}"
+								},
+								"url": {
+									"raw": "{{grades-sevice}}/all",
+									"host": [
+										"{{grades-sevice}}"
+									],
+									"path": [
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "STUDENT_SERVICE",
+			"item": [
+				{
+					"name": "add student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"studentId\": 50,\n    \"name\": \"Abelardo\",\n    \"age\": 8\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{student-service}}",
+							"host": [
+								"{{student-service}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND STUDENT BY ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"studentId\": 50,\n    \"name\": \"Abelardo\",\n    \"age\": 8\n}"
+						},
+						"url": {
+							"raw": "{{student-service}}/1",
+							"host": [
+								"{{student-service}}"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CATALOG",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{catalog}}/CC05",
+							"host": [
+								"{{catalog}}"
+							],
+							"path": [
+								"CC05"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "grades-sevice",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "grades-service-course",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "student-service",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "catalog",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
